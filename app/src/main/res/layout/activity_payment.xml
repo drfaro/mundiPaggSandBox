@@ -1,0 +1,196 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context="com.mundiPaggSandBox.PaymentActivity"
+        android:textSize="20sp">
+
+        <EditText
+            android:hint="Name"
+            android:text="Nome da Silva"
+            android:id="@+id/payment_user_name"
+            android:inputType="textPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:hint="Email"
+            android:text="asd@asd.com"
+            android:id="@+id/payment_user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10" />
+
+        <EditText
+            android:hint="4444333322221111"
+            android:text="4444333322221111"
+            android:id="@+id/payment_credit_card"
+            android:inputType="number"
+            android:maxLength="16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:hint="Holder name card"
+            android:text="Nome no cartao"
+            android:id="@+id/payment_credit_holder"
+            android:inputType="textPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Valor" />
+
+            <EditText
+                android:hint="5.99"
+                android:text="5.99"
+                android:inputType="numberDecimal"
+                android:id="@+id/payment_cents"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:numeric="decimal"
+                android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Parcela" />
+
+                <EditText
+                    android:hint="1"
+                    android:text="1"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:id="@+id/payment_card_installment"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="mes" />
+
+            <EditText
+                android:hint="09"
+                android:text="09"
+                android:maxLength="2"
+                android:inputType="number"
+                android:layout_width="0dp"
+                android:id="@+id/payment_card_month"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:layout_marginRight="0dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ano" />
+
+
+            <EditText
+                android:hint="16"
+                android:text="16"
+                android:inputType="number"
+                android:maxLength="2"
+                android:id="@+id/payment_card_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Cod. Seguranca "
+                android:singleLine="true" />
+
+            <EditText
+                android:hint="312"
+                android:text="132"
+                android:inputType="number"
+                android:maxLength="4"
+                android:id="@+id/payment_card_security"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bandeira"
+            android:linksClickable="true"
+            android:singleLine="false"
+            android:layout_marginTop="10dp" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:id="@+id/payment_card_brand"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/payment_card_brand_visa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Visa"/>
+            <RadioButton android:id="@+id/payment_card_brand_master"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:text="Mastercard"
+                android:singleLine="true" />
+            <RadioButton android:id="@+id/payment_card_brand_amex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Amex"/>
+        </RadioGroup>
+
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
